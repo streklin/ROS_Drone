@@ -1,4 +1,7 @@
+#include<iostream>
 #include<wiringPi.h>
+
+using namespace std;
 
 /*
 WiringPi interface for ultrasonic sensor.
@@ -33,15 +36,18 @@ class UltrasonicSensor {
                 
                 int current_time = millis();
                 if (current_time - start_time > 50) {
-                    throw "Error: Ultrasonic sensor did not respond";
+                    break;
                 }
             }
+            pinMode(this->pin_number_, OUTPUT);
+            digitalWrite(this->pin_number_, LOW);
         }
         
         /* Measures the length of the current ultrasonic sensors response in 
          * microseconds. */
         int measureResponse() {
-            
+	    pinMode(this->pin_number_, INPUT);            
+
             int start_time = micros();
             while(digitalRead(this->pin_number_) == 1) {}
             int end_time = micros();
@@ -73,10 +79,11 @@ class UltrasonicSensor {
             waitForReturn();
             
             int pulseWidth = measureResponse();      
-            float distance = (float)pulseWidth / 58.0f;
-    
+            float distance = (float)pulseWidth * 0.000001f * 17150.0f;
             return distance;
         }
     
     
-}
+};
+
+
