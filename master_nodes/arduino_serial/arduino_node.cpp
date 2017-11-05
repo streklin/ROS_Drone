@@ -1,11 +1,13 @@
 #include<ros/ros.h>
 #include<std_msgs/String.h>
+#include<string.h>
 #include"arduino_serial.cpp"
 
 ArduinoSerialCommunications *ard;
 
 void messageForArduino(const std_msgs::String &msg) {
-    ard->sendMessage(msg);
+    const char* data = msg.data.c_str();
+    ard->sendMessage(data);
 }
 
 int main(int argc, char **argv) {
