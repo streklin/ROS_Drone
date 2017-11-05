@@ -4,16 +4,16 @@
   <wxString Value="/home/gene/git/ROS_Drone/pi_nodes/ultrasonic_sensor/ultrasonic_distance_sensor/ultrasonic_distance_sensor.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="/home/gene/git/ROS_Drone/master_nodes/arduino_serial/arduino_serial.cpp" Name="FileName"/>
-      <int Value="7" Name="FirstVisibleLine"/>
-      <int Value="24" Name="CurrentLine"/>
+      <wxString Value="/home/gene/git/ROS_Drone/master_nodes/arduino_serial/arduino_node.cpp" Name="FileName"/>
+      <int Value="8" Name="FirstVisibleLine"/>
+      <int Value="26" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/gene/git/ROS_Drone/pi_nodes/ultrasonic_sensor/ultrasonic_distance_sensor/ultrasonic_sensor.cpp" Name="FileName"/>
+      <wxString Value="/home/gene/git/ROS_Drone/master_nodes/arduino_serial/arduino_serial.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="12" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
