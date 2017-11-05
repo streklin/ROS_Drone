@@ -11,7 +11,7 @@ void messageForArduino(const std_msgs::String &msg) {
 }
 
 int main(int argc, char **argv) {
-    ros::init(argc, argv, "/pi_rover/arduino");
+    ros::init(argc, argv, "arduino_serial_node");
     ros::NodeHandle nh;
     
     /* 
