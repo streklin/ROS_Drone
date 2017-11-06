@@ -14,6 +14,8 @@ int E2 = 5; //M2 Speed Control
 int M1 = 8; //M1 Direction Control 
 int M2 = 7; //M2 Direction Control 
 
+int LED_PIN = 13; //default led for arduino
+
 void configureMotorController() {
   for(int i = 5; i <= 8; i++) {
     pinMode(i, OUTPUT);
@@ -59,6 +61,15 @@ void goBackwards() {
   
 }
 
+void blinkLED() {
+  for(int i = 0; i < 3; i++) {
+    digitalWrite(LED_PIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_PIN, LOW);
+    delay(1000);
+  }
+}
+
 /* read commands from the pi */
 void getNextCommand() {
   int command;
@@ -74,10 +85,17 @@ void getNextCommand() {
     goBackwards();
   } else if(command == 's') {
     stopRover();
+  } else if(command == 'g') {
+    // used to let the user know that the ROS system has acheived its goal.
+    stopRover();
+    blinkLED();
   }
 }
 
 void setup() {
+  //set led pin mode to output
+  pinMode(LED_PIN, OUTPUT);
+  
   configureMotorController();
   Serial.begin(9600);
 }
