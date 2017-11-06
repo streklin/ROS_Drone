@@ -50,8 +50,16 @@ void stopRover() {
 
 }
 
-/* read commands from the pi */
+void goBackwards() {
+  analogWrite (E1,speed);
+  digitalWrite(M1,HIGH);
 
+  analogWrite (E2,speed);
+  digitalWrite(M2,HIGH);
+  
+}
+
+/* read commands from the pi */
 void getNextCommand() {
   int command;
   command = Serial.read();
@@ -62,7 +70,9 @@ void getNextCommand() {
     goRight();
   } else if(command == 'l') {
     goLeft();
-  } else {
+  } else if(command == 'b') {
+    goBackwards();
+  } else if(command == 's') {
     stopRover();
   }
 }
