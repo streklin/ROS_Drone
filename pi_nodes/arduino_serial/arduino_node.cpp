@@ -14,12 +14,11 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "arduino_serial_node");
     ros::NodeHandle nh;
     
-    std::string arduino_com_port;
-    nh.param("arduino_com_port", arduino_com_port);
-    
-    const char* port_name = arduino_com_port.c_str();
-    ard = new ArduinoSerialCommunications(port_name);
-     
+    /* 
+     * TODO: Get this setting from a parameter server.
+    */
+    ard = new ArduinoSerialCommunications("/dev/ttyACM1");
+    \
     ros::Subscriber sub = nh.subscribe("/pi_rover/arduino/msg", 1000, &messageForArduino);
     ros::spin();
 }

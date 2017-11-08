@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/gene/git/ROS_Drone/pi_nodes/ultrasonic_sensor/ultrasonic_distance_sensor/ultrasonic_distance_sensor.workspace">
-  <int Value="2" Name="m_selectedTab"/>
+  <int Value="3" Name="m_selectedTab"/>
   <wxString Value="/home/gene/git/ROS_Drone/pi_nodes/ultrasonic_sensor/ultrasonic_distance_sensor/ultrasonic_distance_sensor.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -18,16 +18,16 @@
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/gene/git/ROS_Drone/master_nodes/rover_sky_cam/ROSVideoCaptureNode.cpp" Name="FileName"/>
-      <int Value="39" Name="FirstVisibleLine"/>
+      <wxString Value="/home/gene/git/ROS_Drone/pi_nodes/arduino_serial/arduino_node.cpp" Name="FileName"/>
+      <int Value="7" Name="FirstVisibleLine"/>
       <int Value="15" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="/home/gene/git/ROS_Drone/pi_nodes/arduino_serial/arduino_node.cpp" Name="FileName"/>
-      <int Value="7" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <wxString Value="/home/gene/git/ROS_Drone/master_nodes/opencv_video_capture/ROSVideoCaptureNode.cpp" Name="FileName"/>
+      <int Value="15" Name="FirstVisibleLine"/>
+      <int Value="29" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
