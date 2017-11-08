@@ -133,6 +133,7 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/opencv_video_capture_node.cpp)
 
 add_executable(opencv_video_capture_node ROSVideoCaptureNode.cpp)
+add_executable(opencv_image_pipeline_node ROSImageProcessingPipeline.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -153,6 +154,12 @@ target_link_libraries(
     opencv_video_capture_node
     ${catkin_LIBRARIES}
     ${OpenCV_LIBS}
+)
+
+target_link_libraries(
+    opencv_image_pipeline_node
+    ${catkin_LIBRARIES}
+    ${OpenCV_LIBS}    
 )
 
 #############

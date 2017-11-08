@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
     VideoCapture cap;
     
     if (!cap.open(0)) {
-        throw "Error: Unable to communicate with Web Cam.";
+        ROS_ERROR("Error: Unable to communicate with Web Cam.");
     }
     
     while(ros::ok()) {
@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
         cap >> frame;
         
         if( frame.empty() ) {
-            throw "Error: Video feed disconnected.";
+            ROS_ERROR("Error: Video feed disconnected.");
         }
 
         sensor_msgs::Image ros_img = convertToROSImage(frame);

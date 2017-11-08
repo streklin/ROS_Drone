@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/gene/git/ROS_Drone/pi_nodes/ultrasonic_sensor/ultrasonic_distance_sensor/ultrasonic_distance_sensor.workspace">
-  <int Value="3" Name="m_selectedTab"/>
+  <int Value="4" Name="m_selectedTab"/>
   <wxString Value="/home/gene/git/ROS_Drone/pi_nodes/ultrasonic_sensor/ultrasonic_distance_sensor/ultrasonic_distance_sensor.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -26,8 +26,15 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/gene/git/ROS_Drone/master_nodes/opencv_video_capture/ROSVideoCaptureNode.cpp" Name="FileName"/>
-      <int Value="15" Name="FirstVisibleLine"/>
-      <int Value="29" Name="CurrentLine"/>
+      <int Value="36" Name="FirstVisibleLine"/>
+      <int Value="49" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/gene/git/ROS_Drone/master_nodes/opencv_video_capture/ROSImageProcessingPipeline.cpp" Name="FileName"/>
+      <int Value="7" Name="FirstVisibleLine"/>
+      <int Value="12" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
