@@ -3,23 +3,9 @@
 #include<ros/ros.h>
 #include<image_transport/image_transport.h>
 #include<sensor_msgs/image_encodings.h>
+#include"ROSOpenCVUtilities.cpp"
 
 using namespace cv;
-
-/* Transform the Matrix provided by openCV into the ROS Image message format. */
-sensor_msgs::Image convertToROSImage(Mat img) {
-    cv_bridge::CvImage img_bridge;
-    sensor_msgs::Image img_msg;
-    
-    std_msgs::Header header; 
-    header.seq = 0; 
-    header.stamp = ros::Time::now(); 
-    
-    img_bridge = cv_bridge::CvImage(header, sensor_msgs::image_encodings::RGB8, img);
-    img_bridge.toImageMsg(img_msg); 
-    
-    return img_msg;
-}
 
 int main(int argc, char **argv) {
     ros::init(argc, argv, "opencv_video_capture");    
