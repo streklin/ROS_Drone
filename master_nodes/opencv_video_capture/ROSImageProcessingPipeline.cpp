@@ -14,7 +14,9 @@ void imageProcessingPipeline(const sensor_msgs::ImageConstPtr& msg) {
     Mat image = convertROSToOpenCv(msg);
     
     // pattern match for the rover
-    
+    // just draw some green circles until tensorflow is setup 
+    cv::circle(image, Point(50, 50), 10, CV_RGB(0,255,0));
+   
     // pespective transform
     
     
