@@ -4,6 +4,8 @@
  * the scene. 
 */
 
+#include<sstream>
+#include<iostream>
 #include<opencv2/opencv.hpp>
 #include<string>
 
@@ -35,7 +37,11 @@ public:
     void captureAndSaveImage() {
         this->cap >> this->image;
         
-        std::string counter_string = std::to_string(this->counter);
+        std::string counter_string;
+        std::stringstream out;
+        out << this->counter;
+        counter_string = out.str();
+        
         std::string filename = "images/img_" + counter_string + ".jpg";
         imwrite(filename, this->image);
         
@@ -54,6 +60,8 @@ RoverImageCapture g_rover_image_capture(0);
 void onMouse(int event, int x, int y, int, void*) {
     if( event != EVENT_LBUTTONDOWN )
         return;
+
+    std::cout << "Saving image." << std::endl;
 
     g_rover_image_capture.captureAndSaveImage();
 }
