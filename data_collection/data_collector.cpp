@@ -52,6 +52,10 @@ public:
         return this->image;
     }
     
+    void setCounter(int counter) {
+        this->counter = counter;
+    }
+    
 };
 
 
@@ -67,6 +71,16 @@ void onMouse(int event, int x, int y, int, void*) {
 }
 
 int main(int argc, char** argv) {
+    
+    if (argc > 1) {
+        std::string counter_string(argv[0]);
+        std::stringstream out(counter_string);
+        
+        int counter = 0;
+        out >> counter;
+        
+        g_rover_image_capture.setCounter(counter);
+    }
     
     namedWindow(OPENCV_WINDOW);
     
