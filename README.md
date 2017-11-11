@@ -19,4 +19,20 @@ the rover in the world so the system can send the proper commands.
 4. Some kind of goal object will be choosen which the system will be required to guide the rover towards without smashing
 into other objects.  I haven't decided what this should be yet, so details will need to wait.
 
-Further details and diagrams to be added later.
+# Organization
+
+The ROS_Drone system is organized into the following modules:
+
+1. data_collection: This contains all the source code used for collection / transformation
+of any training data used for the rover.
+
+2. master_nodes: Contains all the source code for ROS nodes that will run on the master
+computers (my laptop, and the desktop for the perception pipeline).
+
+3. pi_nodes: Source code for ROS nodes that are intended to run directly on the Raspberry
+Pi.
+
+4. rover: Arduino source files for the DFRobotshop Rover.
+
+5. tensor_flow: FCN source code, built using tensor flow.  These will mostly be python files.
+
