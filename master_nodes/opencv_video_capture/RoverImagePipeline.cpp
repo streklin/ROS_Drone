@@ -38,14 +38,12 @@ public:
                     bgr_raw[1].data[index] = bgr_mask[1].data[index];
                     bgr_raw[2].data[index] = 0;
                 }
-                
             }
         }
         
         // merge things back together
         Mat result;
         merge(bgr_raw, result);
-        
         
         // perform perspective transform on the result
         
